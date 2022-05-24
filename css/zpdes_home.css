@@ -1,0 +1,309 @@
+:root {
+    --main-panel-width: 70%;
+}
+
+/* || GENERAL STYLES */
+html, body {
+    font-family: "Lato", sans-serif;
+    display: flex;
+    justify-content: space-between;
+    margin: 0;
+    min-height: 100%;
+
+}
+br {
+    display: block; /* makes it have a width */
+    content: ""; /* clears default height */
+    margin-top: 15px; /* change this to whatever height you want it */
+}
+
+
+/* || BUTTONS */
+.btn-box{display: flex}
+.btn {
+    display: inline-block;
+    text-align: center;
+    text-decoration: none;
+    align-self: center;
+    margin: 15px auto;
+    border: solid 1px black;
+    border-radius: .25em;
+    padding: 0.5em 1em;
+    color: black;
+    background-color: white;
+    min-width: 150px;
+}
+.btn:active {
+    /* old-school "down" effect on clic + color tweak */
+    transform: translateY(1px);
+    -webkit-transform: translateY(1px);
+    -moz-transofrm:  translateY(1px);
+    filter: saturate(150%);
+}
+.btn::-moz-focus-inner {
+    /* Firefox: removes the inner border shown on focus */
+    border: none;
+}
+.btn:hover {
+    /* inverse colors on hover */
+    color: white;
+    border-color: currentColor;
+    background-color: black;
+}
+.btn:focus {
+    /* make sure we have a visible focus ring */
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(25, 216, 255, 0.5),
+    0 0 0 1.5px rgba(25, 216, 255, 0.5);
+}
+.btn.btn-primary {
+    margin-top: 30px;
+}
+.logout {
+    margin: auto;
+}
+
+
+/* || THE MAIN PANEL */
+.main-head{
+    height: 150px;
+    background: #FFF;
+}
+.main-panel{
+    height: 100%;
+    margin-left: 30%;
+    width: 70%;
+    position: absolute;
+    padding: 5%;
+    overflow-y: scroll;
+}
+
+.accordion {
+  margin-bottom: 1em;
+}
+.accordion .content {
+    overflow-y: hidden;
+    height: 0;
+    transition: height 2s ease-in-out;
+}
+.accordion > input[type="checkbox"]:checked ~ .content {
+    height: auto;
+    overflow: visible;
+    padding: 1em 3em;
+    border: 1px solid black;
+    border-top: 0;
+    border-radius: 0 0 .5em .5em;
+    transition: height 2s ease-in-out;
+}
+.accordion > input[type="checkbox"] {
+  position: absolute;
+  left: -100vw;
+}
+.accordion .handle {
+    margin: 0;
+    font-size: 1.125em;
+    line-height: 1.2em;
+}
+.accordion .handle label.folding:before {
+    font-family: monospace, monospace;
+    content: "+";
+    display: inline-block;
+    margin-right: 10px;
+    font-size: 1em;
+    line-height: 1.556em;
+    vertical-align: middle;
+}
+.accordion > input[type="checkbox"]:checked ~ .handle label.folding:before {
+  content: "-";
+}
+.accordion label.folding {
+    display: block;
+    color: white;
+    cursor: pointer;
+    font-weight: normal;
+    padding: 15px;
+    background: black;
+    border: 1px solid black;
+    border-radius: .5em;
+}
+.accordion label.folding:hover, .accordion label.folding:focus {
+    background: #545454;
+    border: 1px solid #545454;
+}
+
+ul.messages {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+ul.messages > li {
+    border-radius: .5em;
+    font-size: 16px;
+    padding: 1em;
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: space-between;
+}
+ul.messages > li > .closebtn {
+  margin-left: 15px;
+  color: white;
+  font-weight: bold;
+  float: right;
+  font-size: 22px;
+  line-height: 20px;
+  cursor: pointer;
+}
+.messages li.success,  ul.messages > li.success > .closebtn {
+    background-color: #DFF2BF;
+    color: #2D9527;
+}
+.messages li.info,  ul.messages > li.info > .closebtn {
+    background-color: #d7edfc;
+    color: #1e7bbd;
+}
+.messages li.warning,  ul.messages > li.warning > .closebtn {
+    background-color: #FEEFB3;
+    color: #9F6000;
+}
+.messages li.error,  ul.messages > li.error > .closebtn {
+    background-color: #FDE4E1;
+    color: #B10009;
+}
+ul.messages > li > div.message-text-box {
+    min-width: 90%;
+}
+
+
+/* || THE SIDE PANEL */
+.side-panel {
+    overflow-x: hidden;
+    padding: 5%;
+    width: 30%;
+    height: 100%;
+    top: 0;
+    bottom: 0;
+    background-color: black;
+    color: white;
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    align-items: space-between;
+}
+.side-panel .side-info {
+    flex: 1;
+}
+.side-panel .info h2{
+    font-weight: 300;
+}
+
+.progress-list{}
+.progress-list li {
+    font-size: 18px;
+    position: relative;
+    margin: .2em 0;
+}
+.progress-list li.noncurrent {
+    color: #666666;
+}
+.progress-list li.current {
+    color: white;
+    font-size: 1.5em;
+}
+
+div.prompt {
+    font-size: 18px;
+    margin-bottom: 1em;
+}
+mark.highlight {
+    font-weight: bold;
+    font-size: 1.2em;
+    background-color: inherit;
+    margin-left: .8em;
+}
+div.form-group{
+    font-size: 18px;
+    margin-bottom: 1em;
+}
+div.form-row.likert-form-row{
+    margin-bottom: 1em;
+}
+input.setting_button{
+    width: 50px;
+}
+/* The Modal (background) */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+/* Modal Content/Box */
+.modal-content {
+  background-color: #fefefe;
+  margin: 15% auto; /* 15% from the top and centered */
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%; /* Could be more or less, depending on screen size */
+}
+
+/* The Close Button */
+.close_button {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+    width: 10px;
+}
+
+.close_button:hover,
+.close_button:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+#setting-button{
+    background: none;
+    border-width: 0px;
+}
+
+#screen_params_text{
+    text-align: center;
+    font-weight: 600;
+    adding-top: 40px;
+    padding-bottom: 40px;
+}
+
+.fixed_header{
+    width: 100%;
+    table-layout: fixed;
+    border-collapse: collapse;
+}
+
+.fixed_header tbody{
+  display:block;
+  width: 100%;
+  overflow: auto;
+  height: 500px;
+}
+
+.fixed_header thead tr {
+   display: block;
+}
+
+
+.fixed_header th, .fixed_header td {
+  width: 200px;
+}
+
+#timer_img{
+    background: black;
+    width: 80px;
+}
