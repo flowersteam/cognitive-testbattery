@@ -67,11 +67,16 @@ they can change the monitor setting using config.js files in each task directory
 `/js/app_name-of-task/`. By default, the monitor parameter is tuned to a 15.4 inches monitor, 
 but they can change the parameter `size_screen_cm_w` according to the monitor's width in cm. 
 
-## Run the test battery on a server with Django platform
+## Run the test battery on a shared server (e.g., Pavlovia)
+
+We will update the instruction about how to launch our test battery on a shared server like Pavlovia (https://pavlovia.org/) (in preparation).
+
+## Run the test battery on a user's server with Django platform
 
 In our experiment shown in the paper, we used a python web framework, Django 
 (https://www.djangoproject.com/), to organize informed consent, participant's basic questionary,
-and monitor size questionary. We will also guide how to connect our test battery with 
+and monitor size questionary. The source code is available from 
+https://github.com/madolphe/Flowers-OL/tree/master/flowers-ol. We will also guide how to connect our test battery with 
 the web framework. (In preparation)
 
 ## Citation
