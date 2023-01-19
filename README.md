@@ -2,7 +2,7 @@
 This repository includes the source code and playground for the research project: An open-source cognitive test battery to assess human attention and memory.
 by M. Adolphe, M. Sawayama, D. Maurel, A. Delmas, P. Y. Oudeyer, & H. Sauzeon (2022). 
 
-Link to paper: https://www.mswym.com/
+Link to paper: https://www.frontiersin.org/articles/10.3389/fpsyg.2022.880375/full
 
 
 We implemented our test battery using a javascript library, p5.js (https://p5js.org/). 
