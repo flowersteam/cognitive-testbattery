@@ -1,6 +1,10 @@
 # An open-source cognitive test battery to assess human attention and memory
 This repository includes the source code and playground for the research project: An open-source cognitive test battery to assess human attention and memory.
 by M. Adolphe, M. Sawayama, D. Maurel, A. Delmas, P. Y. Oudeyer, & H. Sauzeon (2022). 
+
+Link to paper: https://www.mswym.com/
+
+
 We implemented our test battery using a javascript library, p5.js (https://p5js.org/). 
 
 ## Abstract
@@ -85,10 +89,8 @@ the web framework. (In preparation)
   title={An open-source cognitive test battery to assess human attention and memory},
   author={Adolphe, Maxime and Sawayama, Masataka and Maurel, Denis and Delmas, Alexandra and Oudeyer, Pierre-Yves and Sauzeon, Helene},
   journal={Frontiers in Psychology},
-  volume={??},
-  number={?},
-  pages={?--?},
-  year={????},
-  publisher={???}
+  volume={13},
+  pages={1--16},
+  year={2022},
 }
 ```
